@@ -4,7 +4,7 @@
 .DESCRIPTION
   	AzureAuditSubscription.ps1 - PowerShell scripts that contains functions related to auditing an Azure Subscription.ell Module that contains all functions related to manipulating Azure Storage Table rows/entities.
 .NOTES
-	This module depends on Az.Accounts, Az.Resources PowerShell modules	
+	This module depends on Az.Accounts, Az.Resources, AzTable PowerShell modules	
 #>
 
 function Get-MetricTable

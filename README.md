@@ -1,6 +1,24 @@
 # AzureSubscriptionAudit
 Unofficial collection of scripts to audit an Azure subscription
 
+# Prerequisits
+
+The `Add-SubscriptionRoleAssignmentRecord` script depends on Az.Accounts, Az.Resources, AzTable PowerShell modules.
+
+You can not have both AzureRM and AZ modules installed in the same powershell environment.
+
+Install Powershell 6 with AZ module.
+
+Check what version you have with `$PSVersionTable`
+
+- Download Powershell 6 here https://github.com/PowerShell/PowerShell/releases
+    - Scroll down to the Assets section of the Release you want to install.
+- Install AZ Module
+    - `Install-Module -Name Az -AllowClobber -Scope CurrentUser`
+- Install AZ Table Module
+    - `Install-Module AzTable`
+
+
 # Usage
 
 The `Add-SubscriptionRoleAssignmentRecord` script will iterate through all subscriptions the user has access to.
@@ -68,6 +86,17 @@ Get-AzADApplication
  Get-AzADApplication -ObjectId 39e64ec6-569b-4030-8e1c-c3c519a05d69 | Get-AzADServicePrincipal
  ```
 
+# Troubleshooting
+
+Find the Azure Context name of subcription
+
+```powershell
+
+    Connect-AzAccount
+    Get-AzContext | Format-List
+
+
+```
 
 # References
 - Manage Access using RBAC and Powershell https://docs.microsoft.com/en-us/azure/role-based-access-control/role-assignments-powershell
