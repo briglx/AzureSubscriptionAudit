@@ -1,5 +1,8 @@
 # AzureSubscriptionAudit
-Unofficial collection of scripts to audit an Azure subscription
+Unofficial collection of scripts to audit an Azure subscription.
+
+![Audit Report](https://github.com/briglx/AzureSubscriptionAudit/blob/master/assets/ReportOverview.PNG "Subscription Audit Report")
+
 
 # Prerequisits
 
